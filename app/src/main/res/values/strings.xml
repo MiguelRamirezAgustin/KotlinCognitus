@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Cognitus</string>
+    <string name="app_usuario">Usuario</string>
+    <string name="app_contraseña">Contraseña</string>
+    <string name="app_sesion">Iniciar Sesión</string>
+    <string name="app_iniciar">Iniciar</string>
+</resources>

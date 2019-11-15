@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/fondo_2"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="130dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="@string/app_sesion"
+           android:textSize="24sp"
+           android:textColor="@color/colorAzulletra"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:gravity="center"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/usuario1"
+                android:layout_marginTop="20dp">
+
+                <EditText
+                    android:id="@+id/eTUsuario"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/app_usuario"
+                    android:textSize="16sp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:padding="10dp"
+                    android:drawableLeft="@drawable/usuario"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/usuario1"
+                android:gravity="center"
+                android:layout_marginTop="20dp">
+
+                <EditText
+                    android:id="@+id/eTContraseña"
+                    android:layout_width="0dp"
+                    android:layout_weight=".70"
+                    android:layout_height="match_parent"
+                    android:hint="@string/app_contraseña"
+                    android:padding="5dp"
+                    android:backgroundTint="@android:color/transparent"
+                    android:textSize="16sp"/>
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_weight=".20"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:src="@drawable/eye"/>
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/app_iniciar"
+                android:layout_marginTop="35dp"
+                android:textAllCaps="false"
+                android:background="@drawable/iniciar"
+                android:textSize="18sp"
+                android:textColor="@color/colorLetrabotón"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
