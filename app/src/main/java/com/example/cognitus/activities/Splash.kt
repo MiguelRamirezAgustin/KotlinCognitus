@@ -1,9 +1,10 @@
-package com.example.cognitus
+package com.example.cognitus.activities
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import com.example.cognitus.R
 
 class Splash : AppCompatActivity(),Runnable {
 
@@ -23,5 +24,6 @@ class Splash : AppCompatActivity(),Runnable {
     override fun run() {
         val intent = Intent(this@Splash, MainActivity::class.java)
         startActivity(intent)
+        finish()
     }
 }
