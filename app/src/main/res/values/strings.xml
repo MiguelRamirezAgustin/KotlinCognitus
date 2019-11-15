@@ -3,7 +3,12 @@
     <string name="app_usuario">Usuario</string>
     <string name="app_contraseña">Contraseña</string>
     <string name="app_sesion">Iniciar Sesión</string>
-    <string name="app_iniciar">Iniciar</string>
+    <string name="app_iniciar">Iniciar</string>>
+    <string name="menu_noticias">Noticias</string>>
+    <string name="menu_producto">Productos</string>>
+    <string name="menu_acercaDe">Acerca de</string>
+    <string name="menu_contacto">Contacto</string>
+    <string name="menu_sesion">Cerrar Sesión</string>
 
 
     <string name="ws_url_login">http://35.155.161.8:8080/WSExample/DataWS?ApiCall=</string>

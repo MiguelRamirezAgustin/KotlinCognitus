@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.LinearLayout
 import android.widget.TextView
 import com.example.cognitus.R
 
@@ -16,6 +17,7 @@ class MenuActivity : AppCompatActivity() {
 
         val eTUserParams = findViewById<TextView>(R.id.tVUserParam)
         val btnCerrar = findViewById<Button>(R.id.btnCierra)
+        val LiNoticia = findViewById<LinearLayout>(R.id.LiNoticias)
 
         val data = intent.getStringExtra("nombre_usr")
 
@@ -30,6 +32,12 @@ class MenuActivity : AppCompatActivity() {
             val intent =  Intent(this@MenuActivity, MainActivity::class.java)
             startActivity(intent)
             finish()
+        }
+
+        //Evento de noticias
+        LiNoticia.setOnClickListener {
+            val intent = Intent(this@MenuActivity, NoticiasActivity::class.java )
+            startActivity(intent)
         }
 
     }
