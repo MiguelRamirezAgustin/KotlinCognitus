@@ -7,6 +7,22 @@
     android:orientation="vertical"
     tools:context=".activities.NoticiasActivity">
 
+    <ProgressBar
+        android:id="@+id/pBar"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvMsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/txt_tituloNoticias"
+        android:gravity="center_horizontal"
+        android:textSize="30sp"
+        android:visibility="gone"/>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvNoticias"
         android:layout_width="match_parent"

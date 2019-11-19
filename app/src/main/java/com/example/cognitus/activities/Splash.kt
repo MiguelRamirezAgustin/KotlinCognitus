@@ -16,6 +16,8 @@ class Splash : AppCompatActivity(),Runnable {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
         simulaCarga()
+
+        supportActionBar?.hide()
     }
 
     private fun simulaCarga(){

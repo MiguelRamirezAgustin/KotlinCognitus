@@ -15,6 +15,8 @@ class MenuActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_menu)
 
+        supportActionBar?.hide()
+
         val eTUserParams = findViewById<TextView>(R.id.tVUserParam)
         val btnCerrar = findViewById<Button>(R.id.btnCierra)
         val LiNoticia = findViewById<LinearLayout>(R.id.LiNoticias)

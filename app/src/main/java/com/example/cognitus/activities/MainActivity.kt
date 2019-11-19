@@ -29,6 +29,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        supportActionBar?.hide()
+
         val btnAceptar = findViewById<Button>(R.id.btnLogin)
         val eTContraseña = findViewById<EditText>(R.id.eTContraseña)
         val eTUsuario = findViewById<EditText>(R.id.eTUsuario)

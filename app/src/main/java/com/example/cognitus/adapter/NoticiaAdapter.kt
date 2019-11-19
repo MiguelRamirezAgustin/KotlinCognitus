@@ -5,11 +5,59 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.cognitus.R
 import com.example.cognitus.activities.NoticiasActivity
+import com.example.cognitus.model.NoticiaModel
 import kotlinx.android.synthetic.main.items_noticia.view.*
 
-class NoticiaAdapter (private val context:NoticiasActivity, private val chaptersList: ArrayList<String>) :
+class NoticiaAdapter (private val context:NoticiasActivity, private val noticiaList:List<NoticiaModel>) :
+    RecyclerView.Adapter<NoticiaAdapter.ViewHolder>() {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        return ViewHolder(LayoutInflater.from(context).inflate(R.layout.items_noticia, parent, false))
+    }
+
+    override fun getItemCount(): Int {
+        return noticiaList.size
+    }
+
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        val noticiaModel =noticiaList.get(position)
+        holder.tituloNoticia?.text = noticiaModel.notTitulo
+        holder.fechaNotica?.text = noticiaModel.notFecha
+        val requesManager=  Glide.with(context)
+        val imgUrl = noticiaModel.notImg
+        val requesBuilder = requesManager.load(imgUrl)
+        requesBuilder.into(holder.fotoNoticia)
+        holder.itemView.setOnClickListener {
+            Toast.makeText(
+                context,
+                "Click en el item",
+                Toast.LENGTH_SHORT
+            ).show()
+        }
+        holder.fotoNoticia.setOnClickListener {
+            Toast.makeText(
+                context,
+                "Click en el icono",
+                Toast.LENGTH_SHORT
+            ).show()
+        }
+
+
+    }
+
+    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+        val tituloNoticia = view.tVTitulo
+        val fechaNotica = view.tVFecha
+        val fotoNoticia = view.imgNoticias
+    }
+}
+
+
+
+//Adapter a codigo duro
+/*class NoticiaAdapter (private val context:NoticiasActivity, private val chaptersList: ArrayList<String>) :
     RecyclerView.Adapter<NoticiaAdapter.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         return ViewHolder(LayoutInflater.from(context).inflate(R.layout.items_noticia, parent, false))
@@ -39,4 +87,4 @@ class NoticiaAdapter (private val context:NoticiasActivity, private val chapters
         val fechaNoticia = view.tVFecha!!
         val imgNoticia = view.imgNoticias!!
     }
-}
+}*/
