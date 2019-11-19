@@ -17,6 +17,7 @@ class DetalleNoticiaActivity : AppCompatActivity() {
         val tituloParma = intent.getStringExtra("tituloNoticia")
         val detalleNoticiaParam = intent.getStringExtra("detalleNoticia")
         val urlImg = intent.getStringExtra("imagenNoticia")
+        val urlNoticia = intent.getStringExtra("url_noticia")
 
         val tituloDetalle = findViewById<TextView>(R.id.tVTituloDetalle)
         val detalleNoticia = findViewById<TextView>(R.id.tvDetalleNoticia)
@@ -48,6 +49,12 @@ class DetalleNoticiaActivity : AppCompatActivity() {
             shareIntent.type= "text/plain"
             shareIntent.putExtra(Intent.EXTRA_TEXT, getString(R.string.msj_compartir)+ urlImg)
             startActivity(Intent.createChooser(shareIntent, getString(R.string.titulo_compartir)))
+        }
+
+        imgVer.setOnClickListener{
+            val  intent = Intent(this, WebViewNoticiaActivity::class.java)
+            intent.putExtra("url_noticia", ""+urlNoticia)
+            startActivity(intent)
         }
 
     }

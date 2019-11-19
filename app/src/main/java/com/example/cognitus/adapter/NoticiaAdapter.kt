@@ -10,6 +10,7 @@ import com.bumptech.glide.Glide
 import com.example.cognitus.R
 import com.example.cognitus.activities.DetalleNoticiaActivity
 import com.example.cognitus.activities.NoticiasActivity
+import com.example.cognitus.activities.WebViewNoticiaActivity
 import com.example.cognitus.model.NoticiaModel
 import kotlinx.android.synthetic.main.items_noticia.view.*
 
@@ -36,15 +37,12 @@ class NoticiaAdapter (private val context:NoticiasActivity, private val noticiaL
             intent.putExtra("tituloNoticia", noticiaModel.notTitulo)
             intent.putExtra("detalleNoticia", noticiaModel.notDesc)
             intent.putExtra("imagenNoticia", noticiaModel.notImg)
+            intent.putExtra("url_noticia", noticiaModel.notUrl)
             context.startActivity(intent)
         }
 
         holder.fotoNoticia.setOnClickListener {
-            Toast.makeText(
-                context,
-                "Click en el icono",
-                Toast.LENGTH_SHORT
-            ).show()
+
         }
     }
 

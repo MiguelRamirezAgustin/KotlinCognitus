@@ -26,7 +26,8 @@
         <activity android:name=".activities.MainActivity" />
         <activity android:name=".activities.MenuActivity" />
         <activity android:name=".activities.NoticiasActivity" />
-        <activity android:name=".activities.DetalleNoticiaActivity"></activity>
+        <activity android:name=".activities.DetalleNoticiaActivity" />
+        <activity android:name=".activities.WebViewNoticiaActivity"/>
     </application>
 
 </manifest>
