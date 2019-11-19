@@ -1,5 +1,6 @@
 package com.example.cognitus.activities
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
@@ -20,6 +21,8 @@ class DetalleNoticiaActivity : AppCompatActivity() {
         val tituloDetalle = findViewById<TextView>(R.id.tVTituloDetalle)
         val detalleNoticia = findViewById<TextView>(R.id.tvDetalleNoticia)
         val imgesDetalle = findViewById<ImageView>(R.id.imgNoticiaDetalle)
+        val imgVer = findViewById<ImageView>(R.id.imgVer)
+        val imgCompartir = findViewById<ImageView>(R.id.imgCompartir)
 
         //leer img
         val requestManager = Glide.with(this)
@@ -37,5 +40,15 @@ class DetalleNoticiaActivity : AppCompatActivity() {
             actionBar.setDisplayHomeAsUpEnabled(true)
             actionBar.setDisplayShowHomeEnabled(true)
         }
+
+
+        imgCompartir.setOnClickListener{
+            val shareIntent = Intent()
+            shareIntent.action = Intent.ACTION_SEND
+            shareIntent.type= "text/plain"
+            shareIntent.putExtra(Intent.EXTRA_TEXT, getString(R.string.msj_compartir)+ urlImg)
+            startActivity(Intent.createChooser(shareIntent, getString(R.string.titulo_compartir)))
+        }
+
     }
 }

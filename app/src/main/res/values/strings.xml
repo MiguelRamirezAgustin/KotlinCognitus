@@ -11,6 +11,8 @@
     <string name="menu_sesion">Cerrar Sesión</string>
     <string name="txt_titulonews">Noticias </string>
     <string name="txt_tituloNoticias">Noticias </string>
+    <string name="titulo_compartir">Compartir mediante</string>
+    <string name="msj_compartir">Me gustaria que vieras esto.</string>
 
     <string name="ws_url_login">http://35.155.161.8:8080/WSExample/DataWS?ApiCall=</string>
     <string name="ws_url">http://35.155.161.8:8080/WSExample/DataWS?ApiCall=getNews</string>
