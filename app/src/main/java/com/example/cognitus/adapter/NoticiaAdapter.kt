@@ -1,5 +1,6 @@
 package com.example.cognitus.adapter
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -7,6 +8,7 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.cognitus.R
+import com.example.cognitus.activities.DetalleNoticiaActivity
 import com.example.cognitus.activities.NoticiasActivity
 import com.example.cognitus.model.NoticiaModel
 import kotlinx.android.synthetic.main.items_noticia.view.*
@@ -35,7 +37,11 @@ class NoticiaAdapter (private val context:NoticiasActivity, private val noticiaL
                 "Click en el item",
                 Toast.LENGTH_SHORT
             ).show()
+
+            val intent = Intent(holder.itemView.context, DetalleNoticiaActivity::class.java)
+            context.startActivity(intent)
         }
+
         holder.fotoNoticia.setOnClickListener {
             Toast.makeText(
                 context,
@@ -43,8 +49,6 @@ class NoticiaAdapter (private val context:NoticiasActivity, private val noticiaL
                 Toast.LENGTH_SHORT
             ).show()
         }
-
-
     }
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
