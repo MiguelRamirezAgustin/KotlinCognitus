@@ -32,13 +32,10 @@ class NoticiaAdapter (private val context:NoticiasActivity, private val noticiaL
         val requesBuilder = requesManager.load(imgUrl)
         requesBuilder.into(holder.fotoNoticia)
         holder.itemView.setOnClickListener {
-            Toast.makeText(
-                context,
-                "Click en el item",
-                Toast.LENGTH_SHORT
-            ).show()
-
             val intent = Intent(holder.itemView.context, DetalleNoticiaActivity::class.java)
+            intent.putExtra("tituloNoticia", noticiaModel.notTitulo)
+            intent.putExtra("detalleNoticia", noticiaModel.notDesc)
+            intent.putExtra("imagenNoticia", noticiaModel.notImg)
             context.startActivity(intent)
         }
 

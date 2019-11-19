@@ -16,7 +16,6 @@
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup,GoogleAppIndexingWarning"
         tools:targetApi="n">
-        <activity android:name=".activities.DetalleNoticiaActivity"></activity>
         <activity android:name=".activities.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,6 +26,7 @@
         <activity android:name=".activities.MainActivity" />
         <activity android:name=".activities.MenuActivity" />
         <activity android:name=".activities.NoticiasActivity" />
+        <activity android:name=".activities.DetalleNoticiaActivity"></activity>
     </application>
 
 </manifest>
