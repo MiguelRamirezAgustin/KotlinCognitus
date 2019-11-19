@@ -24,7 +24,7 @@ import org.json.JSONObject
 class MainActivity : AppCompatActivity() {
     lateinit var strUsr: String
     lateinit var strNip: String
-    
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
