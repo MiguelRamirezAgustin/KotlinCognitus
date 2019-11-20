@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.cognitus.R
 import com.example.cognitus.activities.DetalleNoticiaActivity
+import com.example.cognitus.activities.DetalleProductoActivity
 import com.example.cognitus.activities.NoticiasActivity
 import com.example.cognitus.activities.ProductosActivity
 import com.example.cognitus.model.NoticiaModel
@@ -28,18 +29,18 @@ class ProductoAdpater (private val context: ProductosActivity, private val produ
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val productoModel =productoList.get(position)
         holder.tituloProducto?.text = productoModel.prodTit
-        holder.precioProducto?.text = productoModel.prodPre
+        holder.precioProducto?.text = "$ " +productoModel.prodPre+ " MXN"
         val requesManager=  Glide.with(context)
         val imgUrl = productoModel.prodImg
         val requesBuilder = requesManager.load(imgUrl)
         requesBuilder.into(holder.fotoProducto)
         holder.itemView.setOnClickListener {
-           /* val intent = Intent(holder.itemView.context, DetalleNoticiaActivity::class.java)
-            intent.putExtra("tituloNoticia", noticiaModel.notTitulo)
-            intent.putExtra("detalleNoticia", noticiaModel.notDesc)
-            intent.putExtra("imagenNoticia", noticiaModel.notImg)
-            intent.putExtra("url_noticia", noticiaModel.notUrl)
-            context.startActivity(intent)*/
+            val intent = Intent(holder.itemView.context, DetalleProductoActivity::class.java)
+            intent.putExtra("titleProducto", ""+productoModel.prodTit)
+            intent.putExtra("img_url", ""+productoModel.prodImg)
+            intent.putExtra("detalle_Producto", ""+productoModel.prodDes)
+            intent.putExtra("detalle_precio", ""+productoModel.prodPre)
+            context.startActivity(intent)
         }
 
 

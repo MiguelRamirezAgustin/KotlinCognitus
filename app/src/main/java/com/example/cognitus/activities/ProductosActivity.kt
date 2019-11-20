@@ -105,7 +105,7 @@ class ProductosActivity : AppCompatActivity() {
                 val listaProductos = ArrayList<ProductoModel>()
                 // create JSONObject from string response
                 val rootJsonObject = JSONObject(results)
-                // val isSucess = rootJsonObject.getString("noticias")
+                // val isSucess = rootJsonObject.getString("productos")
                 val noticiasObject = rootJsonObject.getString("productos")
                 val noticiasArray = JSONArray(noticiasObject)
                 for (i in 0 until noticiasArray.length()) {

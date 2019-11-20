@@ -15,8 +15,7 @@
         <ImageView
             android:id="@+id/imgNoticiaDetalle"
             android:layout_width="match_parent"
-            android:layout_height="230dp"
-            android:src="@drawable/img_1"/>
+            android:layout_height="230dp"/>
 
     </LinearLayout>
 
@@ -32,7 +31,9 @@
             android:id="@+id/tVTituloDetalle"
             android:layout_width="190dp"
             android:layout_height="match_parent"
-            android:gravity="center"
+            android:textSize="16sp"
+            android:paddingTop="10dp"
+            android:textColor="@color/colorPrimary"
             android:layout_weight=".70"/>
 
         <ImageView
@@ -64,8 +65,10 @@
             android:id="@+id/tvDetalleNoticia"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
+            android:justificationMode="inter_word"
+            android:layout_gravity="center_vertical|end"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
             android:layout_marginTop="10dp"/>
 
     </LinearLayout>

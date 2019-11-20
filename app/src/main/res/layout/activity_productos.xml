@@ -18,7 +18,7 @@
         android:id="@+id/tvMsgP"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/txt_tituloNoticias"
+        android:text="@string/txt_tituloProductos"
         android:gravity="center_horizontal"
         android:textSize="30sp"
         android:visibility="gone"/>
