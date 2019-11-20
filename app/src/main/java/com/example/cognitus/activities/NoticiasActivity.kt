@@ -48,6 +48,7 @@ class NoticiasActivity : AppCompatActivity() {
             actionBar.setDisplayHomeAsUpEnabled(true)
             actionBar.setDisplayShowHomeEnabled(true)
         }
+
         //verify if we have internet connection
         if (Utils.verifyAvailableNetwork(this)) {
             // Call AsyncTask for getting list from server in JSON format

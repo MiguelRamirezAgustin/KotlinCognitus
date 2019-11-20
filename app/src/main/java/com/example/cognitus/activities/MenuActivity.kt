@@ -20,6 +20,7 @@ class MenuActivity : AppCompatActivity() {
         val eTUserParams = findViewById<TextView>(R.id.tVUserParam)
         val btnCerrar = findViewById<Button>(R.id.btnCierra)
         val LiNoticia = findViewById<LinearLayout>(R.id.LiNoticias)
+        val LiProducto = findViewById<LinearLayout>(R.id.LiProducto)
 
         val data = intent.getStringExtra("nombre_usr")
 
@@ -39,6 +40,12 @@ class MenuActivity : AppCompatActivity() {
         //Evento de noticias
         LiNoticia.setOnClickListener {
             val intent = Intent(this@MenuActivity, NoticiasActivity::class.java )
+            startActivity(intent)
+        }
+
+        //evento Producto
+        LiProducto.setOnClickListener {
+            val intent = Intent(this@MenuActivity, ProductosActivity::class.java)
             startActivity(intent)
         }
 

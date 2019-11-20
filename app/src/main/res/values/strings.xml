@@ -16,5 +16,6 @@
 
     <string name="ws_url_login">http://35.155.161.8:8080/WSExample/DataWS?ApiCall=</string>
     <string name="ws_url">http://35.155.161.8:8080/WSExample/DataWS?ApiCall=getNews</string>
+    <string name="ws_url_producto">http://35.155.161.8:8080/WSExample/DataWS?ApiCall=getProductos</string>
     <string name="img_url">http://35.155.161.8:8080/WSExample/</string>
 </resources>
