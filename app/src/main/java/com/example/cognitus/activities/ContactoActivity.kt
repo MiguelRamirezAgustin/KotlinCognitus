@@ -15,7 +15,9 @@ import com.example.cognitus.R
 import com.example.cognitus.task.ApiGetPostHelper
 import com.example.cognitus.utilities.DialogAlerta
 import com.example.cognitus.utilities.Utils
+import kotlinx.android.synthetic.main.activity_contacto.*
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_main.pBar
 import org.json.JSONException
 import org.json.JSONObject
 
@@ -31,8 +33,8 @@ class ContactoActivity : AppCompatActivity() {
 
         val btnContacto = findViewById<Button>(R.id.btIniciatContacto)
         var eTContactoUsuarios = findViewById<EditText>(R.id.eTUsuarioContacto)
-        val eTContactCorreo = findViewById<EditText>(R.id.eTCorreoContacto)
-        val eTContactoMensaje = findViewById<EditText>(R.id.eTMensajeContacto)
+        var eTContactCorreo = findViewById<EditText>(R.id.eTCorreoContacto)
+        var eTContactoMensaje = findViewById<EditText>(R.id.eTMensajeContacto)
 
         val actionBar = supportActionBar
         if(actionBar != null){
@@ -60,6 +62,7 @@ class ContactoActivity : AppCompatActivity() {
             }
         }
     }
+
 
 
     //Inner class Async to consume Ws
@@ -96,6 +99,9 @@ class ContactoActivity : AppCompatActivity() {
                 val validoObject = rootJsonObject.getString("valido")
                 if (validoObject == "1") {
                     DialogAlerta.crearDialogo(this@ContactoActivity,"", "Gracias por enviarnos sus comentarios","Alerta")
+                    eTUsuarioContacto.setText("")
+                    eTCorreoContacto.setText("")
+                    eTMensajeContacto.setText("")
                 }else{
                     DialogAlerta.crearDialogo(this@ContactoActivity,"", "Datos incorrectos","Alerta")
                 }

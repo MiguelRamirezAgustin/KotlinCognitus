@@ -40,6 +40,7 @@ class ProductoAdpater (private val context: ProductosActivity, private val produ
             intent.putExtra("img_url", ""+productoModel.prodImg)
             intent.putExtra("detalle_Producto", ""+productoModel.prodDes)
             intent.putExtra("detalle_precio", ""+productoModel.prodPre)
+            intent.putExtra("id_producto", ""+productoModel.prodId)
             context.startActivity(intent)
         }
 

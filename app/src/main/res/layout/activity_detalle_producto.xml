@@ -7,6 +7,14 @@
     android:orientation="vertical"
     tools:context=".activities.DetalleProductoActivity">
 
+    <ProgressBar
+        android:id="@+id/pBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:outlineSpotShadowColor="@color/colorPrimary"
+        android:visibility="gone" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -59,6 +67,7 @@
                     android:gravity="right">
 
                     <ImageView
+                        android:id="@+id/btnCompras"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/boton_compras"/>
