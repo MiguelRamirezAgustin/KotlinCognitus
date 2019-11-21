@@ -45,7 +45,6 @@
             android:paddingStart="7dp"
             android:paddingRight="7dp"
             android:paddingTop="6dp"
-            android:background="@drawable/imgborder"
             android:layout_weight=".40">
 
             <ImageView

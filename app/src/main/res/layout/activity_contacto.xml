@@ -7,13 +7,20 @@
     android:orientation="vertical"
     tools:context=".activities.ContactoActivity">
 
+    <ProgressBar
+        android:id="@+id/pBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:outlineSpotShadowColor="@color/colorPrimary"
+        android:visibility="gone" />
+
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ellipse"
-        android:layout_gravity="center"
-        android:layout_marginTop="30dp"/>
+        android:src="@drawable/images_2_1"
+        android:layout_gravity="center"/>
 
    <LinearLayout
        android:layout_width="match_parent"
@@ -24,6 +31,7 @@
        android:layout_marginTop="20dp">
 
        <EditText
+           android:id="@+id/eTUsuarioContacto"
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
            android:hint="@string/app_usuario"
@@ -37,6 +45,7 @@
 
 
        <EditText
+           android:id="@+id/eTCorreoContacto"
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
            android:hint="@string/app_correo"
@@ -50,16 +59,21 @@
            android:drawableLeft="@drawable/mensaje"/>
 
        <EditText
+           android:id="@+id/eTMensajeContacto"
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
            android:background="@drawable/rectangulo_mensaje"
            android:hint="@string/app_mensaje"
            android:textSize="16sp"
+           android:paddingLeft="10dp"
            android:gravity="top"
            android:maxLength="400"
+           android:paddingRight="10dp"
+           android:paddingTop="5dp"
            android:layout_marginTop="20dp"/>
 
        <Button
+           android:id="@+id/btIniciatContacto"
            android:layout_width="match_parent"
            android:layout_height="wrap_content"
            android:background="@drawable/iniciar"

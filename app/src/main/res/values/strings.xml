@@ -17,8 +17,10 @@
     <string name="msj_compartir">Me gustaria que vieras esto.</string>
     <string name="app_correo">Correo</string>
     <string name="app_mensaje">Mensaje</string>
+    <string name="app_aceptar">Aceptar</string>
 
     <string name="ws_url_login">http://35.155.161.8:8080/WSExample/DataWS?ApiCall=</string>
+    <string name="ws_url_contacto">http://35.155.161.8:8080/WSExample/DataWS?ApiCall=</string>
     <string name="ws_url_acercaDe">http://35.155.161.8:8080/WSExample/DataWS?ApiCall=getNosotros</string>
     <string name="ws_url">http://35.155.161.8:8080/WSExample/DataWS?ApiCall=getNews</string>
     <string name="ws_url_producto">http://35.155.161.8:8080/WSExample/DataWS?ApiCall=getProductos</string>
