@@ -14,6 +14,8 @@
     <string name="txt_tituloProductos">Productos </string>
     <string name="titulo_compartir">Compartir mediante</string>
     <string name="msj_compartir">Me gustaria que vieras esto.</string>
+    <string name="app_correo">Correo</string>
+    <string name="app_mensaje">Mensaje</string>
 
     <string name="ws_url_login">http://35.155.161.8:8080/WSExample/DataWS?ApiCall=</string>
     <string name="ws_url">http://35.155.161.8:8080/WSExample/DataWS?ApiCall=getNews</string>

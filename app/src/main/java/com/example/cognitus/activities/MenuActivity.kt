@@ -21,6 +21,8 @@ class MenuActivity : AppCompatActivity() {
         val btnCerrar = findViewById<Button>(R.id.btnCierra)
         val LiNoticia = findViewById<LinearLayout>(R.id.LiNoticias)
         val LiProducto = findViewById<LinearLayout>(R.id.LiProducto)
+        val LiContato = findViewById<LinearLayout>(R.id.LiContacto)
+
 
         val data = intent.getStringExtra("nombre_usr")
 
@@ -47,6 +49,11 @@ class MenuActivity : AppCompatActivity() {
         LiProducto.setOnClickListener {
             val intent = Intent(this@MenuActivity, ProductosActivity::class.java)
             startActivity(intent)
+        }
+
+        //Evento contacto
+        LiContato.setOnClickListener {
+            startActivity(Intent(this@MenuActivity, ContactoActivity::class.java))
         }
 
     }
