@@ -26,16 +26,16 @@
         <activity android:name=".activities.MainActivity" />
         <activity android:name=".activities.MenuActivity" />
         <activity android:name=".activities.NoticiasActivity" />
-        <activity
-            android:name=".activities.DetalleNoticiaActivity"
-            android:parentActivityName=".activities.NoticiasActivity" />
+        <activity android:name=".activities.DetalleNoticiaActivity"
+                  android:parentActivityName=".activities.NoticiasActivity" />
         <activity android:name=".activities.WebViewNoticiaActivity" />
         <activity android:name=".activities.ProductosActivity" />
-        <activity
-            android:name=".activities.DetalleProductoActivity"
-            android:parentActivityName=".activities.ProductosActivity" />
+        <activity android:name=".activities.DetalleProductoActivity"
+                  android:parentActivityName=".activities.ProductosActivity" />
         <activity android:name=".activities.ContactoActivity"
-            android:parentActivityName=".activities.MenuActivity"/>
+                  android:parentActivityName=".activities.MenuActivity" />
+        <activity android:name=".activities.AcercaDeActivity"
+                  android:parentActivityName=".activities.MenuActivity"/>
     </application>
 
 </manifest>

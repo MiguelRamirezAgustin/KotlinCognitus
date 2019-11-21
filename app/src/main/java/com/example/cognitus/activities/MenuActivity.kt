@@ -22,7 +22,7 @@ class MenuActivity : AppCompatActivity() {
         val LiNoticia = findViewById<LinearLayout>(R.id.LiNoticias)
         val LiProducto = findViewById<LinearLayout>(R.id.LiProducto)
         val LiContato = findViewById<LinearLayout>(R.id.LiContacto)
-
+        val LiAcercaDe = findViewById<LinearLayout>(R.id.LiAcercaDe)
 
         val data = intent.getStringExtra("nombre_usr")
 
@@ -54,6 +54,11 @@ class MenuActivity : AppCompatActivity() {
         //Evento contacto
         LiContato.setOnClickListener {
             startActivity(Intent(this@MenuActivity, ContactoActivity::class.java))
+        }
+
+        //Evento Acerca de
+        LiAcercaDe.setOnClickListener {
+            startActivity(Intent(this@MenuActivity, AcercaDeActivity::class.java))
         }
 
     }
