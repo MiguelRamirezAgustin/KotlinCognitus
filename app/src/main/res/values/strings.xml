@@ -18,6 +18,7 @@
     <string name="app_correo">Correo</string>
     <string name="app_mensaje">Mensaje</string>
     <string name="app_aceptar">Aceptar</string>
+    <string name="app_cancela">Cancela</string>
 
     <string name="ws_url_login">http://35.155.161.8:8080/WSExample/DataWS?ApiCall=</string>
     <string name="ws_url_contacto">http://35.155.161.8:8080/WSExample/DataWS?ApiCall=</string>

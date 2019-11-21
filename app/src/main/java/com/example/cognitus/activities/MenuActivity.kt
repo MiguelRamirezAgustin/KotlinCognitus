@@ -8,6 +8,7 @@ import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
 import com.example.cognitus.R
+import com.example.cognitus.utilities.DialogAlerta
 
 class MenuActivity : AppCompatActivity() {
 
@@ -30,6 +31,7 @@ class MenuActivity : AppCompatActivity() {
 
         btnCerrar.setOnClickListener{
             //cerrar sesion y elimina shareActionProvider
+
             val shareActionProvider = getSharedPreferences("my_aplication_cognius",Context.MODE_PRIVATE)
             var editor = shareActionProvider.edit()
             editor.putString("usr_id", "")

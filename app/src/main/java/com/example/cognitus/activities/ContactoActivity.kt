@@ -45,7 +45,9 @@ class ContactoActivity : AppCompatActivity() {
 
         btnContacto.setOnClickListener {
             if (eTContactCorreo.text.isEmpty() || eTContactoUsuarios.text.isEmpty() || eTContactoMensaje.text.isEmpty()) {
-                DialogAlerta.crearDialogo(this@ContactoActivity, "", "Los campos no deben de estan vacios", "Alerta")
+                //DialogAlerta.crearDialogo(this@ContactoActivity, "", "Los campos no deben de estan vacios", "Alerta",0)
+                DialogAlerta.creaAlerta(this@ContactoActivity,
+                    "","Los campos no deben de esatr vacios","Alert",1,true,false)
             } else {
                 if(Utils.isEmailValid(""+eTContactCorreo.text)){
                     if (Utils.verifyAvailableNetwork(this)){
@@ -54,10 +56,14 @@ class ContactoActivity : AppCompatActivity() {
                         strMsj = eTContactoMensaje.text.toString()
                         getContacto().execute()
                     }else{
-                       DialogAlerta.crearDialogo(this@ContactoActivity, "", "¡No cuenta con conexión a Internet!", "Alerta")
+                       //DialogAlerta.crearDialogo(this@ContactoActivity, "", "¡No cuenta con conexión a Internet!", "Alerta",0)
+                        DialogAlerta.creaAlerta(this@ContactoActivity,
+                            "", "¡No cuenta con conexión a Internet!", "Alerta", 1, true, false)
                     }
                 }else{
-                     DialogAlerta.crearDialogo(this@ContactoActivity, "", "El correo no cumple con el formato", "Alerta")
+                     //DialogAlerta.crearDialogo(this@ContactoActivity, "", "El correo no cumple con el formato", "Alerta",0)
+                    DialogAlerta.creaAlerta(this@ContactoActivity,
+                        "", "El correo no cumple con el formato", "Alerta", 1, true, false)
                 }
             }
         }
@@ -98,15 +104,21 @@ class ContactoActivity : AppCompatActivity() {
                 val rootJsonObject = JSONObject(results)
                 val validoObject = rootJsonObject.getString("valido")
                 if (validoObject == "1") {
-                    DialogAlerta.crearDialogo(this@ContactoActivity,"", "Gracias por enviarnos sus comentarios","Alerta")
+                    DialogAlerta.crearDialogo(this@ContactoActivity,
+                        "","Gracias por contactarnos","Alerta",0,true,false)
                     eTUsuarioContacto.setText("")
                     eTCorreoContacto.setText("")
                     eTMensajeContacto.setText("")
                 }else{
-                    DialogAlerta.crearDialogo(this@ContactoActivity,"", "Datos incorrectos","Alerta")
+                    DialogAlerta.creaAlerta(this@ContactoActivity,
+                        "","Datos incorrectos","Alerta", 1, true, false)
                 }
             }catch (e: JSONException){
-                DialogAlerta.crearDialogo(this@ContactoActivity,"", "Lo sentimos, algo salio mal, ¡Intenta de nuevo!","Alerta")
+                Toast.makeText(
+                    this@ContactoActivity,
+                    "Lo sentimos, algo salio mal, ¡Intenta de nuevo!",
+                    Toast.LENGTH_SHORT
+                ).show()
                 e.printStackTrace()
             }
         }

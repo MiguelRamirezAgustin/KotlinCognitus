@@ -104,7 +104,8 @@ class DetalleProductoActivity : AppCompatActivity() {
                     val mItemObject = JSONObject(usuarioObject)
 
                     val prodId = mItemObject.getString("orden")
-                    DialogAlerta.crearDialogo(this@DetalleProductoActivity, "", "El id de la orden es: "+prodId, "Alerta")
+
+                    //DialogAlerta.crearDialogo(this@DetalleProductoActivity, "", "El id de la orden es: "+prodId, "Alerta",0)
                 }else{
                     Toast.makeText(applicationContext,
                         "Datos incorrectos",

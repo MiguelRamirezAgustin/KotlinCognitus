@@ -46,7 +46,20 @@
             android:layout_weight="1"
             android:background="@drawable/iniciar"
             android:text="@string/app_aceptar"
-            android:textColor="@color/colorLetrabotón" />
+            android:textColor="@color/colorLetrabotón"
+            android:visibility="gone"/>
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/iniciar"
+            android:text="@string/app_cancela"
+            android:textColor="@color/colorLetrabotón"
+            android:visibility="gone"/>
 
     </LinearLayout>
 </LinearLayout>
