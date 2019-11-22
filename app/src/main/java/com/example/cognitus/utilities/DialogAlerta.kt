@@ -5,8 +5,10 @@ import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
+import androidx.core.content.ContextCompat.startActivity
 import androidx.core.view.isVisible
 import com.example.cognitus.R
+import com.example.cognitus.activities.MainActivity
 import com.example.cognitus.activities.MenuActivity
 import kotlinx.android.synthetic.main.view_dialog.view.*
 
@@ -55,10 +57,20 @@ object DialogAlerta {
 
             if (tipo == 1) {
                 alert.dismiss()
-            } else {
+            }else {
                 val intent = Intent(context, MenuActivity::class.java)
                 context.startActivity(intent)
             }
+
+           /* if (tipo == 2){
+                val shareActionProvider = context.getSharedPreferences("my_aplication_cognius",Context.MODE_PRIVATE)
+                var editor = shareActionProvider.edit()
+                editor.putString("usr_id", "")
+                editor.commit()
+                val intent =  Intent(context, MainActivity::class.java)
+                context.startActivity(intent)
+                context.finish()
+            }*/
         }}
         if (btnC) {
             mDialogView.btnCancel.visibility = View.VISIBLE

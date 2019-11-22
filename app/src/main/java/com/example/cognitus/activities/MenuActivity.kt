@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
@@ -32,6 +33,9 @@ class MenuActivity : AppCompatActivity() {
         btnCerrar.setOnClickListener{
             //cerrar sesion y elimina shareActionProvider
 
+            /*DialogAlerta.creaAlerta(this@MenuActivity,
+                "","¿Desea cerrar la sesion ?","Alert",2,true,true)*/
+
             val shareActionProvider = getSharedPreferences("my_aplication_cognius",Context.MODE_PRIVATE)
             var editor = shareActionProvider.edit()
             editor.putString("usr_id", "")
@@ -39,6 +43,7 @@ class MenuActivity : AppCompatActivity() {
             val intent =  Intent(this@MenuActivity, MainActivity::class.java)
             startActivity(intent)
             finish()
+
         }
 
         //Evento de noticias
