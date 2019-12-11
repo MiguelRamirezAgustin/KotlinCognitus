@@ -81,6 +81,7 @@ class DetalleProductoActivity : AppCompatActivity() {
             //Enviar parámetros y valores en la API JSON
             sendParams["valor"] = ""
             //envíe el HttpPostRequest por HttpURLConnection y reciba un resultado en la cadena de retorno
+            //http://35.155.161.8:8080/WSExample/DataWS?ApiCall=setProdOrder&id_producto=2
             return ApiGetPostHelper.SendParams(
                 getString(R.string.ws_url_productoId) + "&id_producto=" + strId ,
                 sendParams

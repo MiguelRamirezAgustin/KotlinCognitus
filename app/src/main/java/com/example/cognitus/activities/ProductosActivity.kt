@@ -133,6 +133,7 @@ class ProductosActivity : AppCompatActivity() {
                 )
                 rvNoticias.layoutManager = linearLayoutManager
                 rvNoticias.adapter = ProductoAdpater(this@ProductosActivity, listaProductos)
+
             } catch (e: JSONException) {
                 Toast.makeText(
                     applicationContext,

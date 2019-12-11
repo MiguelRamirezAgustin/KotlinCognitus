@@ -10,7 +10,7 @@ import com.example.cognitus.R
 
 class Splash : AppCompatActivity(),Runnable {
 
-        private lateinit var handler:Handler;
+        private lateinit var handler:Handler
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
